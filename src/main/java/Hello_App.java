@@ -1,20 +1,17 @@
 public class Hello_App
 {
     
-    public static void main(String[] args){
-       StringBuilder nameBuilder= new StringBuilder();
-       boolean first=true;
-       for(String name:args){
-       
-        nameBuilder.append(name).append(", ");
-       }
-         String name=" ";
-         if(nameBuilder.length()>0){
-            name= nameBuilder.substring(0, nameBuilder.length()-2);
-       }
-       
-       
-       System.out.println("Hello " + name); 
-    }
+    
 
-}
+
+
+    public static void main(String[] args){
+       String names = "World";
+       if(args.length>0){
+        names = String.join(",", args);
+        System.out.println("Hello " + names);
+       }
+
+       
+    }
+}    
